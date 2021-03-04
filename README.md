@@ -63,6 +63,6 @@ such as text and video tutorials, demos, etc. Consult the [community channels](h
 for more info.
 ### DOES CURRENTLY NOT WORK ON THE VITA
 ### BUILD FOR VITA:
-run install_all in the vitasdk and then make sure you have python2 and scons then run this build coammand: scons platform=vita target=debug -j4 module_squish_enabled=false builtin_openssl=no module_openssl_enabled=false disable_3d=yes module_webp_enabled=false editor=no
+run install_all in the vitasdk/install pigs in a blanket and then make sure you have python2 and scons then run this build coammand: scons platform=vita target=debug -j4 module_squish_enabled=false builtin_openssl=no module_openssl_enabled=false disable_3d=yes module_webp_enabled=false editor=no
 [![Build Status](https://travis-ci.org/godotengine/godot.svg?branch=master)](https://travis-ci.org/godotengine/godot)
 [![Code Triagers Badge](https://www.codetriage.com/godotengine/godot/badges/users.svg)](https://www.codetriage.com/godotengine/godot)
