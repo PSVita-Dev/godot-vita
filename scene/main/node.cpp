@@ -35,6 +35,7 @@
 #include "scene/resources/packed_scene.h"
 #include "scene/scene_string_names.h"
 #include "viewport.h"
+#include <alloca.h>
 
 VARIANT_ENUM_CAST(Node::PauseMode);
 
@@ -970,8 +971,8 @@ bool Node::is_greater_than(const Node *p_node) const {
 
 #else
 
-	int *this_stack = (int *)malloc(sizeof(int) * data.depth);
-	int *that_stack = (int *)malloc(sizeof(int) * p_node->data.depth);
+	int *this_stack = (int *)alloca(sizeof(int) * data.depth);
+	int *that_stack = (int *)alloca(sizeof(int) * p_node->data.depth);
 
 #endif
 
