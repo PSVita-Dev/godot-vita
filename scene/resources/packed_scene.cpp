@@ -35,6 +35,7 @@
 #include "scene/3d/spatial.h"
 #include "scene/gui/control.h"
 #include "scene/main/instance_placeholder.h"
+#include <alloca.h>
 #define PACK_VERSION 2
 
 bool SceneState::can_instance() const {
@@ -74,7 +75,7 @@ Node *SceneState::instance(bool p_gen_edit_state) const {
 
 	const NodeData *nd = &nodes[0];
 
-	Node **ret_nodes = (Node **)malloc(sizeof(Node *) * nc);
+	Node **ret_nodes = (Node **)alloca(sizeof(Node *) * nc);
 
 	bool gen_node_path_cache = p_gen_edit_state && node_path_cache.empty();
 
