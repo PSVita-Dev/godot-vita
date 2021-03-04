@@ -39,6 +39,13 @@
 #include <stdlib.h>
 #include <string.h>
 #include <alloca.h>
+#include <psp2/kernel/clib.h>
+#include <pib.h>
+#include <psp2/kernel/processmgr.h>
+#include <EGL/egl.h>
+#include <GLES2/gl2.h>
+#include <GLES2/gl2ext.h>
+#include <psp2/gxm.h>
 
 #ifdef GLEW_ENABLED
 #define _GL_HALF_FLOAT_OES 0x140B
