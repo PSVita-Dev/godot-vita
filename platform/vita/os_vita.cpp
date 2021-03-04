@@ -56,7 +56,7 @@
 // #include "packet_peer_udp_posix.h"
 
 #include "main/main.h"
-
+/*some stuff taken from godot-3ds!*/
 
 OS_VITA::OS_VITA()
 : video_mode(960 , 544, true, false, false)
