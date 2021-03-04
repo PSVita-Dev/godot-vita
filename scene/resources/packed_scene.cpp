@@ -74,7 +74,7 @@ Node *SceneState::instance(bool p_gen_edit_state) const {
 
 	const NodeData *nd = &nodes[0];
 
-	Node **ret_nodes = (Node **)alloca(sizeof(Node *) * nc);
+	Node **ret_nodes = (Node **)malloc(sizeof(Node *) * nc);
 
 	bool gen_node_path_cache = p_gen_edit_state && node_path_cache.empty();
 
