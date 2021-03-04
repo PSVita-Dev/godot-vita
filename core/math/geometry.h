@@ -698,7 +698,7 @@ public:
 		if (polygon.size() == 0)
 			return polygon;
 
-		int *location_cache = (int *)alloca(sizeof(int) * polygon.size());
+		int *location_cache = (int *)malloc(sizeof(int) * polygon.size());
 		int inside_count = 0;
 		int outside_count = 0;
 
