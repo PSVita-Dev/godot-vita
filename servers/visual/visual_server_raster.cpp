@@ -33,6 +33,7 @@
 #include "io/marshalls.h"
 #include "os/os.h"
 #include "sort.h"
+#include <alloca.h>
 // careful, these may run in different threads than the visual server
 
 BalloonAllocator<> *VisualServerRaster::OctreeAllocator::allocator = NULL;
