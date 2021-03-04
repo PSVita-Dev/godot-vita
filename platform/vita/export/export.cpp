@@ -42,8 +42,8 @@ void register_vita_exporter() {
 	{
 		Ref<EditorExportPlatformPC> exporter = Ref<EditorExportPlatformPC>(memnew(EditorExportPlatformPC));
 		exporter->set_binary_extension(".bin");
-		exporter->set_release_binary32("eboot.bin");
-		exporter->set_debug_binary32("eboot.bin");
+		exporter->set_release_binary32("vita_release_32");
+		exporter->set_debug_binary32("vita_debug_32");
 		exporter->set_name("Playstation Vita");
 		exporter->set_logo(logo);
 		EditorImportExport::get_singleton()->add_export_platform(exporter);
