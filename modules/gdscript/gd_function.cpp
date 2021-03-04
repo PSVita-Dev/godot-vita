@@ -2,6 +2,7 @@
 #include "gd_functions.h"
 #include "gd_script.h"
 #include "os/os.h"
+#include <alloca.h>
 
 Variant *GDFunction::_get_variant(int p_address, GDInstance *p_instance, GDScript *p_script, Variant &self, Variant *p_stack, String &r_error) const {
 
@@ -195,7 +196,7 @@ Variant GDFunction::call(GDInstance *p_instance, const Variant **p_args, int p_a
 
 		if (alloca_size) {
 
-			uint8_t *aptr = (uint8_t *)malloc(alloca_size);
+			uint8_t *aptr = (uint8_t *)alloca(alloca_size);
 
 			if (_stack_size) {
 
