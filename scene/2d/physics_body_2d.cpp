@@ -457,9 +457,9 @@ void RigidBody2D::_direct_state_changed(Object *p_state) {
 			}
 		}
 
-		_RigidBody2DInOut *toadd = (_RigidBody2DInOut *)alloca(state->get_contact_count() * sizeof(_RigidBody2DInOut));
+		_RigidBody2DInOut *toadd = (_RigidBody2DInOut *)malloc(state->get_contact_count() * sizeof(_RigidBody2DInOut));
 		int toadd_count = 0; //state->get_contact_count();
-		RigidBody2D_RemoveAction *toremove = (RigidBody2D_RemoveAction *)alloca(rc * sizeof(RigidBody2D_RemoveAction));
+		RigidBody2D_RemoveAction *toremove = (RigidBody2D_RemoveAction *)malloc(rc * sizeof(RigidBody2D_RemoveAction));
 		int toremove_count = 0;
 
 		//put the ones to add
