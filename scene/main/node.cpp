@@ -970,8 +970,8 @@ bool Node::is_greater_than(const Node *p_node) const {
 
 #else
 
-	int *this_stack = (int *)alloca(sizeof(int) * data.depth);
-	int *that_stack = (int *)alloca(sizeof(int) * p_node->data.depth);
+	int *this_stack = (int *)malloc(sizeof(int) * data.depth);
+	int *that_stack = (int *)malloc(sizeof(int) * p_node->data.depth);
 
 #endif
 
