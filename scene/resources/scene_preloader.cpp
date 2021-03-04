@@ -29,6 +29,7 @@
 /*************************************************************************/
 #include "scene_preloader.h"
 #include "globals.h"
+#include <alloca.h>
 
 bool ScenePreloader::can_instance() const {
 
@@ -54,7 +55,7 @@ Node *ScenePreloader::instance() const {
 
 	const NodeData *nd = &nodes[0];
 
-	Node **ret_nodes = (Node **)malloc(sizeof(Node *) * nc);
+	Node **ret_nodes = (Node **)alloca(sizeof(Node *) * nc);
 
 	for (int i = 0; i < nc; i++) {
 
