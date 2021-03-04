@@ -195,7 +195,7 @@ Variant GDFunction::call(GDInstance *p_instance, const Variant **p_args, int p_a
 
 		if (alloca_size) {
 
-			uint8_t *aptr = (uint8_t *)alloca(alloca_size);
+			uint8_t *aptr = (uint8_t *)malloc(alloca_size);
 
 			if (_stack_size) {
 
