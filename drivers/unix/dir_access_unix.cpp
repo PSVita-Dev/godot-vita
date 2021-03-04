@@ -31,7 +31,7 @@
 
 #if defined(UNIX_ENABLED) || defined(LIBC_FILEIO_ENABLED)
 
-#ifndef ANDROID_ENABLED
+#if defined ANDROID_ENABLED
 #include <sys/statvfs.h>
 #endif
 
@@ -302,7 +302,7 @@ Error DirAccessUnix::remove(String p_path) {
 
 size_t DirAccessUnix::get_space_left() {
 
-#ifndef NO_STATVFS
+#if defined NO_STATVFS
 	struct statvfs vfs;
 	if (statvfs(current_dir.utf8().get_data(), &vfs) != 0) {
 
