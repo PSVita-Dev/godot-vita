@@ -9305,7 +9305,7 @@ void RasterizerGLES2::sampled_light_dp_update(RID p_sampled_light, const Color *
 
 	} else {
 		//convert to bytes
-		uint8_t *tex8 = (uint8_t *)alloca(slight->w * slight->h * 4);
+		uint8_t *tex8 = (uint8_t *)malloc(slight->w * slight->h * 4);
 		const float *src = (const float *)p_data;
 
 		for (int i = 0; i < slight->w * slight->h * 4; i++) {
