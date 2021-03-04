@@ -31,6 +31,7 @@
 
 #include "globals.h"
 #include "io/marshalls.h"
+#include <alloca.h>
 /* helpers / binders */
 
 PacketPeer::PacketPeer() {
