@@ -128,7 +128,7 @@ void OS_VITA::initialize(const VideoMode& p_desired,int p_video_driver,int p_aud
 	}
 
 
-*/
+
 	ERR_FAIL_COND(!visual_server);
 
 	visual_server->init();
