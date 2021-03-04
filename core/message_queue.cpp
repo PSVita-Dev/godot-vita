@@ -30,6 +30,7 @@
 #include "message_queue.h"
 #include "globals.h"
 #include "script_language.h"
+#include <alloca.h>
 MessageQueue *MessageQueue::singleton = NULL;
 
 MessageQueue *MessageQueue::get_singleton() {
